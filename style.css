@@ -16,3 +16,7 @@ html {
 	text-align: center;
 	padding-top: 10px;
 } 
+
+#body {
+	width: 80%;
+}
