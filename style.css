@@ -24,3 +24,7 @@ html {
 	width: 80%;
 	background: #CCCCCC;
 }
+#side {
+	margin-left: 2%;
+	width: 8%;
+}
