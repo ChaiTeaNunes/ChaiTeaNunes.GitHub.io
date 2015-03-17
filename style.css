@@ -18,7 +18,8 @@ html {
 } 
 
 #body {
-	margin: 10%;
+	margin-left: 10%;
+	padding-top: 10px;
 	width: 80%;
 	text-align: center;
 	background: red;
