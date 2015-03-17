@@ -18,6 +18,8 @@ html {
 } 
 
 #body {
+	margin-left: 10%;
+	padding: 10px;
 	width: 80%;
 	background: red;
 }
