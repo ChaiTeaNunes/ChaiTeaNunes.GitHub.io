@@ -18,9 +18,9 @@ html {
 } 
 
 #body {
-	height: 500px;
+	height: 490px;
 	margin-left: 10%;
-	margin-top: -510px;
+	margin-top: -500px;
 	padding-top: 10px;
 	padding-bottom: 10px;
 	width: 80%;
@@ -29,6 +29,6 @@ html {
 #side {
 	background: orange;
 	width: 7%;
-	height: 600px;
+	height: 610px;
 	margin-top: -100px;
 }
