@@ -26,10 +26,19 @@ html {
 	width: 80%;
 	background: #CCCCCC;
 }
-#side {
+#sider {
 	background: orange;
 	width: 9%;
 	height: 610px;
+	margin-top: -110px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+#sidel {
+	background: orange;
+	width: 9%;
+	height: 610px;
+	margin-left: 15px;
 	margin-top: -110px;
 	padding-top: 10px;
 	padding-bottom: 10px;
