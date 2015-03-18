@@ -20,6 +20,7 @@ html {
 #body {
 	height: 500px;
 	margin-left: 10%;
+	margin-top: -500px;
 	padding-top: 10px;
 	padding-bottom: 10px;
 	width: 80%;
@@ -27,7 +28,6 @@ html {
 }
 #side {
 	background: orange;
-	margin-left: 2%;
 	width: 7%;
 	height: 500px;
 }
