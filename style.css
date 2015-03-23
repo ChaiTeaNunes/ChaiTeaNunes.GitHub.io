@@ -1,153 +1,110 @@
-@font-face {
-	font-family: Fipps;
-	src: url(Fipps-Regular.otf);
-}
-
-html,body {
-  height: 100%;
-}
-
-/* wrapper for page content to push down footer */
-.page-container {
-  min-height: 100%;
-  height: auto !important;
-  height: 100%;
-  /* negative indent footer by its height */
-  margin: 0 auto -120px;
-  /* pad bottom by footer height */
-  padding: 0 0 120px;
-}
-
-/* set the fixed height of the footer here */
-#footer {
-  height: 120px;
-  background-color: #222222;
-  border:0 solid #080808;
-  border-top-width: 1px;
-  margin-top:50px;
-  z-index:100;
-}
-
-#footer > .container {
-  padding: 20px;
-}
-
-#footer a{
-  color:#cccccc;
-}
-
-#footer a:hover {
-  color:#ffffff;
-  margin-left:-2px;
-  text-decoration:none;
+.navbar-form input, .form-inline input {
+  width:auto;
 }
 
 body {
-  padding-top: 51px; 
-  background: #1E1E1E;
-  color: #f9f9f9;
-}
-a {
-  color:#efefef;
-}
-.text-center {
-  padding-top: 20px;
+  padding-top:50px;
 }
 
-#sidebar {
-  height: 100%;
-  padding-right: 0;
-  padding-top: 20px;
-  z-index:-1;
+footer {
+  margin-top:40px;
+  padding-top:40px;
+  padding-bottom:40px;
+  background-color:#ededed;
 }
 
-#sidebar .affix {
+
+#masthead {
+  min-height:199px;
+}
+
+#masthead h1 {
+  font-size: 55px;
+  line-height: 1;
+  margin-top:50px;
+}
+
+#masthead .well {
+  margin-top:31px;
+  min-height:127px;
+}
+
+.navbar.affix {
   position:fixed;
-  top:55;
-  width:220px;
+  top:0;
+  width:100%;
 }
 
-#sidebar .affix-bottom {
-  position:fixed;
-  top:55;
-  width:220px;
+.story-img {
+  margin-top:25%;
+  display:block;
 }
 
-#sidebar .nav {
-  width: 95%;
-}
-#sidebar li {
-  border:0 #1e1e1e solid;
-  border-bottom-width:1px;
-}
-#sidebar li a {
-  padding-left:1px;
-}
-#sidebar li a:hover {
-  background-color:#222222;
-  color:#ffffff;
+a,a:hover {
+  color:#223344;
+  text-decoration:none;
 }
 
-/* collapsed sidebar styles */
-@media screen and (max-width: 767px) {
-  .row-offcanvas {
-    position: relative;
-    -webkit-transition: all 0.25s ease-out;
-    -moz-transition: all 0.25s ease-out;
-    transition: all 0.25s ease-out;
-  }
-  .row-offcanvas-right
-  .sidebar-offcanvas {
-    right: -41.6%;
-  }
+.icon-bar {
+  background-color:#fff;
+}
 
-  .row-offcanvas-left
-  .sidebar-offcanvas {
-    left: -41.6%;
-  }
-  .row-offcanvas-right.active {
-    right: 41.6%;
-  }
-  .row-offcanvas-left.active {
-    left: 41.6%;
-  }
-  .sidebar-offcanvas {
-    position: absolute;
-    top: 0;
-    width: 41.6%;
-  }
-  #sidebar {
-    background-color:#3b3b3b;
-    padding-top:0;
-  }
-  #sidebar .nav>li {
-    color: #ddd;
-    background: linear-gradient(#3E3E3E, #383838);
-    border-top: 1px solid #484848;
-    border-bottom: 1px solid #2E2E2E;
-    padding-left:10px;
-  }
-  #sidebar .nav>li:first-child {
-    border-top:0;
-  }
-  #sidebar .nav>li>a {
-    color: #ddd;
-  }
-  #sidebar .nav>li>a>img {
-    max-width: 14px;
-  }
-  #sidebar .nav>li>a:hover, #sidebar .nav>li>a:focus {
-    text-decoration: none;
-    background: linear-gradient(#373737, #323232);
-    color: #fff;  
-  }
-  #sidebar .nav .caret {
-    border-top-color: #fff;
-    border-bottom-color: #fff;
-  }
-  #sidebar .nav a:hover .caret{
-    border-top-color: #fff;
-    border-bottom-color: #fff;
+@media screen and (min-width: 768px) {
+  #masthead h1 {
+    font-size: 80px;
   }
 }
 
+.dropdown-menu {
+  min-width: 250px;
+}
+
+.panel {
+  border-color:transparent;
+  border-radius:0;
+}
+
+.thumbnail {
+  margin-bottom:8px;
+}
+
+.img-container {
+  overflow:hidden;
+  height:170px;
+}
+
+.img-container img {
+  min-width:280px;
+  min-height:180px;
+  max-width:380px;
+  max-height:280px;
+}
+
+.txt-container {
+  overflow:hidden;
+  height:100px;
+}
+
+.panel .lead {
+  overflow:hidden;
+  height:90px;
+}
+
+.label-float{
+  margin:0 auto;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  width:100%;
+  opacity:.9;
+  padding:6px;
+  color:#fff;
+}
+    
+.btn-twitter {background-color:#4099FF;color:#fff;}
+.btn-facebook {background-color:#3B5998;color:#fff;}
+.btn-google-plus {background-color:#d34836;color:#fff;}
+
+.btn-twitter:hover {background-color:#3088FF;color:#62BBFF;}
+.btn-facebook:hover {background-color:#2A4998;color:#4C6BBA;}
+.btn-google-plus:hover {background-color:#C23836;color:#E45A58;}
