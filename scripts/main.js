@@ -7,15 +7,6 @@ var Square = function (x, y, color) {
     this.color = color;
 }
 
-Square.prototype = {
-    draw: function () {
-        push();
-        fill(color);
-        rect(this.x, this.y, size, size);
-        pop();
-    }   
-}
-
 function setup () {
     createCanvas(1080, 720);
     noStroke();
@@ -24,7 +15,16 @@ function setup () {
     squareSize = width / squareCount;
 }
 
+Square.prototype = {
+    draw: function () {
+        push();
+        fill(color);
+        rect(this.x, this.y, squareSize, squareSize);
+        pop();
+    }   
+}
+
 function draw () {
-    var square = new Square(0, 0, 0);
+    var square = new Square(frameCount, frameCount, 0);
     square.draw();
 }
