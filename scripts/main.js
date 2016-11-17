@@ -18,7 +18,7 @@ function setup () {
 Square.prototype = {
     draw: function () {
         push();
-        fill(color);
+        fill(this.color);
         rect(this.x, this.y, squareSize, squareSize);
         pop();
     }   
