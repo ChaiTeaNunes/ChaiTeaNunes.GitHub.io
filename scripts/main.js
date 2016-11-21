@@ -18,7 +18,7 @@ function instantiateSquares() {
     for (var i = 0; i < squareCount; i++) {
         squares.push([]);
         for (var j = 0; j < squareCount; j++) {
-            square = new Square(i * squareSize + frameCount * (i % 2), j * squareSize, ((i + (j % 2)) % 2) * 255);
+            square = new Square(i * squareSize + (frameCount * (i % 2)), j * squareSize, ((i + (j % 2)) % 2) * 255);
             squares[i].push(square);
         }
     }
