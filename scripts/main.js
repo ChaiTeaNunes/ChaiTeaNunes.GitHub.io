@@ -7,12 +7,13 @@ var Square = function (x, y, color) {
     this.y = y;
     this.color = color;
     this.draw = function () {
+        clear();
         fill(this.color);
         rect(this.x, this.y, squareSize, squareSize);
     }
 }
 
-function drawSquares() {
+function instantiateSquares() {
     var square;
     for (var i = 0; i < squareCount; i++) {
         squares.push([]);
@@ -21,7 +22,9 @@ function drawSquares() {
             squares[i].push(square);
         }
     }
-    
+}
+
+function drawSquares() {
     for (var i = 0; i < squares.length; i++) {
         for (var j = 0; j < squares[i].length; j++) {
             squares[i][j].draw();
@@ -36,9 +39,9 @@ function setup () {
     angleMode(DEGREES);
     squareSize = width / squareCount;
     
-    drawSquares();
+    instantiateSquares();
 }
 
 function draw () {
-    
+    drawSquares();
 }
