@@ -31,6 +31,7 @@ function setup () {
             square = new Square(i * squareSize, j * squareSize, ((i + (j % 2)) % 2) * 255);
             squares[i][j] = square;
             console.log(squares[i][j].x);
+            console.log(squares[i][j].y);
         }
     }
     
