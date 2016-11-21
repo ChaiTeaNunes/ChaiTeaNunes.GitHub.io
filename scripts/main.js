@@ -12,13 +12,7 @@ var Square = function (x, y, color) {
     }
 }
 
-function setup () {
-    createCanvas(1080, 720);
-    noStroke();
-    background(255);
-    angleMode(DEGREES);
-    squareSize = width / squareCount;
-    
+function drawSquares() {
     var square;
     for (var i = 0; i < squareCount; i++) {
         squares.push([]);
@@ -33,6 +27,16 @@ function setup () {
             squares[i][j].draw();
         }
     }
+}
+
+function setup () {
+    createCanvas(1080, 720);
+    noStroke();
+    background(255);
+    angleMode(DEGREES);
+    squareSize = width / squareCount;
+    
+    drawSquares();
 }
 
 function draw () {
