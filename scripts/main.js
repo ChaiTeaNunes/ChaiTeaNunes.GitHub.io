@@ -15,6 +15,13 @@ function setup () {
     angleMode(DEGREES);
     squareSize = width / squareCount;
     
+    Square.prototype = {
+        draw: function () {
+            fill(this.color);
+            rect(this.x, this.y, squareSize, squareSize);
+        }
+    }
+    
     squares = new Array(squareCount);
     var emptyArray = new Array(squareCount);
     var square;
@@ -23,13 +30,6 @@ function setup () {
         for (var j = 0; j < squareCount; j++) {
             square = new Square(i * squareSize, j * squareSize, ((i + (j % 2)) % 2) * 255);
             squares[i][j] = square;
-        }
-    }
-    
-    Square.prototype = {
-        draw: function () {
-            fill(this.color);
-            rect(this.x, this.y, squareSize, squareSize);
         }
     }
     
