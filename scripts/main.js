@@ -1,6 +1,6 @@
 var squareCount = 10.8;
 var squareSize;
-var squares;
+var squares = [];
 
 var Square = function (x, y, color) {
     this.x = x;
