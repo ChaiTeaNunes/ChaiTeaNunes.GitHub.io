@@ -26,6 +26,6 @@ Square.prototype = {
 
 function draw () {
     var square = new Square(frameCount, frameCount, 0);
-    square.draw();
     background(255);
+    square.draw();
 }
