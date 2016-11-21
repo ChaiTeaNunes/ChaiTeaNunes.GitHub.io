@@ -1,4 +1,4 @@
-var squareCount = 10;
+var squareCount = 10.8;
 var squareSize;
 var squares;
 
@@ -6,6 +6,10 @@ var Square = function (x, y, color) {
     this.x = x;
     this.y = y;
     this.color = color;
+    this.draw = function () {
+        fill(this.color);
+        rect(this.x, this.y, squareSize, squareSize);
+    }
 }
 
 function setup () {
@@ -15,29 +19,18 @@ function setup () {
     angleMode(DEGREES);
     squareSize = width / squareCount;
     
-    Square.prototype = {
-        draw: function () {
-            fill(this.color);
-            rect(this.x, this.y, squareSize, squareSize);
-        }
-    }
-    
-    squares = new Array(squareCount);
-    var emptyArray = new Array(squareCount);
     var square;
     for (var i = 0; i < squareCount; i++) {
-        squares[i] = emptyArray;
+        squares.push([]);
         for (var j = 0; j < squareCount; j++) {
             square = new Square(i * squareSize, j * squareSize, ((i + (j % 2)) % 2) * 255);
-            squares[i][j] = square;
+            squares[i].push(square);
         }
     }
     
     for (var i = 0; i < squares.length; i++) {
         for (var j = 0; j < squares[i].length; j++) {
             squares[i][j].draw();
-            console.log(squares[i][j].x);
-            console.log(squares[i][j].y);
         }
     }
 }
