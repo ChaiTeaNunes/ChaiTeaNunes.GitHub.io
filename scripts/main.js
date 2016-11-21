@@ -1,4 +1,4 @@
-var squareCount;
+var squareCount = 10;
 var squareSize;
 
 var Square = function (x, y, color) {
