@@ -17,15 +17,19 @@ function setup () {
 
 Square.prototype = {
     draw: function () {
-        push();
+        clear();
         fill(this.color);
         rect(this.x, this.y, squareSize, squareSize);
-        pop();
     }   
 }
 
 function draw () {
-    var square = new Square(frameCount, frameCount, 0);
-    background(255);
-    square.draw();
+    var square;
+    for (var i = 0; i < squareCount; i++) {
+        for (var j = 0; j < squareCount; j++) {
+            square = new Square(i * squareSize, j * squareSize, ((i + (j % 2)) % 2) * 255);
+            square.draw();
+        }
+    }
+    
 }
