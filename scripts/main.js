@@ -30,14 +30,14 @@ function setup () {
         for (var j = 0; j < squareCount; j++) {
             square = new Square(i * squareSize, j * squareSize, ((i + (j % 2)) % 2) * 255);
             squares[i][j] = square;
-            console.log(squares[i][j].x);
-            console.log(squares[i][j].y);
         }
     }
     
     for (var i = 0; i < squares.length; i++) {
         for (var j = 0; j < squares[i].length; j++) {
             squares[i][j].draw();
+            console.log(squares[i][j].x);
+            console.log(squares[i][j].y);
         }
     }
 }
