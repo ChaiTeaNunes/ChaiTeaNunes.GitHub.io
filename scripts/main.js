@@ -7,7 +7,6 @@ var Square = function (x, y, color) {
     this.y = y;
     this.color = color;
     this.draw = function () {
-        clear();
         fill(this.color);
         rect(this.x, this.y, squareSize, squareSize);
     }
