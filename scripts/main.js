@@ -34,7 +34,7 @@ function drawSquares() {
             }
             squares[i][j].draw();
             if (squares[i][j].x >= width + squareSize) {
-                squares[i][j].x = -squareSize;
+                squares[i][j].x = -squareSize + 1;
             }
             if (squares[i][j].y >= width + squareSize) {
                 squares[i][j].y = -squareSize;   
