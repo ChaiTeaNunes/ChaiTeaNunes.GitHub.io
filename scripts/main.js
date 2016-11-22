@@ -27,7 +27,7 @@ function instantiateSquares() {
 function drawSquares() {
     for (var i = 0; i < squares.length; i++) {
         for (var j = 0; j < squares[i].length; j++) {
-            squares[i][j].x += (frameCount * (j % 2));
+            squares[i][j].x += j % 2;
             squares[i][j].draw();
             if (squares[i][j].x >= width) {
                 squares[i][j].x = 0;
