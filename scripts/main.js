@@ -29,7 +29,7 @@ function drawSquares() {
         for (var j = 0; j < squares[i].length; j++) {
             squares[i][j].x += j % 2;
             squares[i][j].draw();
-            if (squares[i][j].x >= width + squareSize) {
+            if (squares[i][j].x >= width) {
                 squares[i][j].x = -squareSize;
             }
         }
