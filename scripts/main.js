@@ -27,10 +27,17 @@ function instantiateSquares() {
 function drawSquares() {
     for (var i = 0; i < squares.length; i++) {
         for (var j = 0; j < squares[i].length; j++) {
-            squares[i][j].x += j % 2;
+            if (frameCount % (squareSize * 4) <= squareSize * 2) {
+                squares[i][j].x += j % 2;
+            } else {
+                squares[i][j].y += i % 2;   
+            }
             squares[i][j].draw();
             if (squares[i][j].x >= width + squareSize) {
                 squares[i][j].x = -squareSize;
+            }
+            if (squares[i][j].y >= height + squareSize) {
+                squares[i][j].y = -squareSize;   
             }
         }
     }
