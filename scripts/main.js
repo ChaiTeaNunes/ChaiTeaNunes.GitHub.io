@@ -1,5 +1,5 @@
-var squareCount = 10;
-var squareSize;
+//var squareCount = 10;
+var squareSize = 100;
 var squares = [];
 
 var Square = function (x, y, color) {
@@ -48,7 +48,7 @@ function setup () {
     noStroke();
     background(255);
     angleMode(DEGREES);
-    squareSize = Math.round(width / squareCount);
+    //squareSize = Math.round(width / squareCount);
     
     instantiateSquares();
 }
