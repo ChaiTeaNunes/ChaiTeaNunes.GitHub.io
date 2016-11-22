@@ -31,7 +31,7 @@ function drawSquares() {
             if (frameCount % (squareSize * 2) <= squareSize) {
                 squares[i][j].x += (j % 2) * 2;
             } else if ((squares[i][j].x + squareSize) % (squareSize * 2) != 0) {
-                squares[i][j].x++;
+                squares[i][j].x += j % 2;
             }
             squares[i][j].draw();
             if (squares[i][j].x >= width + squareSize) {
