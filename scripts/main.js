@@ -1,4 +1,5 @@
-var squareSize = 100;
+var squareCount = 10;
+var squareSize;
 var squares = [];
 
 var Square = function (x, y, color) {
@@ -13,9 +14,9 @@ var Square = function (x, y, color) {
 
 function instantiateSquares() {
     var square;
-    for (var i = 0; i < width / squareSize + 2; i++) {
+    for (var i = 0; i < squareCount + 2; i++) {
         squares.push([]);
-        for (var j = 0; j < width / squareSize + 2; j++) {
+        for (var j = 0; j < squareCount + 2; j++) {
             square = new Square((i - 2) * squareSize + (j % 2) * 2, (j - 2) * squareSize, ((i + (j % 2)) % 2) * 255);
             console.log(square.x + ", " + square.y);
             squares[i].push(square);
@@ -48,6 +49,7 @@ function setup () {
     background(255);
     angleMode(DEGREES);
     
+    squareSize = Math.round(width / squareCount);
     instantiateSquares();
 }
 
