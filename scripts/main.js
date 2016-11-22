@@ -17,7 +17,7 @@ function instantiateSquares() {
     for (var i = 0; i < squareCount; i++) {
         squares.push([]);
         for (var j = 0; j < squareCount; j++) {
-            square = new Square(i * squareSize + (frameCount * (i % 2)), j * squareSize, ((i + (j % 2)) % 2) * 255);
+            square = new Square(i * squareSize, j * squareSize, ((i + (j % 2)) % 2) * 255);
             console.log(square.x + ", " + square.y);
             squares[i].push(square);
         }
@@ -27,6 +27,7 @@ function instantiateSquares() {
 function drawSquares() {
     for (var i = 0; i < squares.length; i++) {
         for (var j = 0; j < squares[i].length; j++) {
+            squares[i][j].x += (frameCount * (i % 2));
             squares[i][j].draw();
         }
     }
