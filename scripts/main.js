@@ -1,6 +1,7 @@
 var squareCount = 10;
 var squareSize;
 var squares = [];
+var horizontal = true;
 
 var Square = function (x, y, color) {
     this.x = x;
@@ -27,12 +28,16 @@ function instantiateSquares() {
 function drawSquares() {
     for (var i = 0; i < squares.length; i++) {
         for (var j = 0; j < squares[i].length; j++) {
-            if (frameCount % (squareSize * 2) <= squareSize) {
+            if (horizontal) {
                 squares[i][j].x += (j % 2) * 2;
-            }
-            
-            if (frameCount % (squareSize * 2) >= squareSize) {
+                if ((squares[i][j].x + squareSize) % (squareSize * 2) == 0) {
+                    horizontal = false;   
+                }
+            } else {
                 squares[i][j].y += (i % 2) * 2;
+                if ((squares[i][j].y + squareSize) % (squareSize * 2) == 0) {
+                    horizontal = true;   
+                }
             }
             squares[i][j].draw();
             if (squares[i][j].x >= width + squareSize) {
