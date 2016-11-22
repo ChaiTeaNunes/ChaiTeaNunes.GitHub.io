@@ -1,4 +1,4 @@
-var squareCount = 10.8;
+var squareCount = 10;
 var squareSize;
 var squares = [];
 
@@ -14,10 +14,10 @@ var Square = function (x, y, color) {
 
 function instantiateSquares() {
     var square;
-    for (var i = 0; i < squareCount; i++) {
+    for (var i = 0; i < squareCount + 1; i++) {
         squares.push([]);
-        for (var j = 0; j < squareCount; j++) {
-            square = new Square(i * squareSize, j * squareSize, ((i + (j % 2)) % 2) * 255);
+        for (var j = 0; j < squareCount + 1; j++) {
+            square = new Square(i * squareSize - squareSize, j * squareSize - squareSize, ((i + (j % 2)) % 2) * 255);
             console.log(square.x + ", " + square.y);
             squares[i].push(square);
         }
@@ -29,8 +29,8 @@ function drawSquares() {
         for (var j = 0; j < squares[i].length; j++) {
             squares[i][j].x += j % 2;
             squares[i][j].draw();
-            if (squares[i][j].x >= width) {
-                squares[i][j].x = 0;
+            if (squares[i][j].x >= width + squareSize) {
+                squares[i][j].x = -squareSize;
             }
         }
     }
