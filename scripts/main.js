@@ -1,6 +1,5 @@
 var squareCount = 10;
 var squareSize;
-var hasLooped = false;
 var squares = [];
 
 var Square = function (x, y, color) {
@@ -42,7 +41,6 @@ function drawSquares() {
             }
         }
     }
-    hasLooped = true;
 }
 
 function setup () {
