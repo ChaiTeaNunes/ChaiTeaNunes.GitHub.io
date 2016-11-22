@@ -32,10 +32,10 @@ function drawSquares() {
                 squares[i][j].y += (i % 2) * 2;   
             }
             squares[i][j].draw();
-            if (squares[i][j].x >= width + squareSize) {
+            if (squares[i][j].x >= squares[squares.length - 1][squares[0].length - 1].x + squareSize) {
                 squares[i][j].x = -squareSize;
             }
-            if (squares[i][j].y >= width + squareSize) {
+            if (squares[i][j].y >= squares[squares.length - 1][squares[0].length - 1].x + squareSize) {
                 squares[i][j].y = -squareSize;   
             }
         }
