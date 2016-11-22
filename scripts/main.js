@@ -1,7 +1,6 @@
 var squareCount = 10;
 var squareSize;
 var squares = [];
-var horizontal = true;
 
 var Square = function (x, y, color) {
     this.x = x;
@@ -18,7 +17,8 @@ function instantiateSquares() {
     for (var i = 0; i < squareCount + 2; i++) {
         squares.push([]);
         for (var j = 0; j < squareCount + 2; j++) {
-            square = new Square((i - 2) * squareSize, (j - 2) * squareSize, ((i + (j % 2)) % 2) * 255);
+            square = new Square((i - 2) * squareSize + (j % 2) * 2, (j - 2) * squareSize, ((i + (j % 2)) % 2) * 255);
+            console.log(square.x + ", " + square.y);
             squares[i].push(square);
         }
     }
@@ -29,14 +29,15 @@ function drawSquares() {
         for (var j = 0; j < squares[i].length; j++) {
             if (frameCount % (squareSize * 2) < squareSize) {
                 squares[i][j].x += (j % 2) * 2;
-                console.log(x);
+            } else {
+                squares[i][j].y += (i % 2) * 2;   
             }
             squares[i][j].draw();
             if (squares[i][j].x >= width + squareSize) {
                 squares[i][j].x = -squareSize;
             }
             if (squares[i][j].y >= width + squareSize) {
-                squares[i][j].y = -squareSize;
+                squares[i][j].y = -squareSize;   
             }
         }
     }
@@ -47,7 +48,7 @@ function setup () {
     noStroke();
     background(255);
     angleMode(DEGREES);
-    squareSize = width / squareCount;
+    squareSize = Math.round(width / squareCount);
     
     instantiateSquares();
 }
