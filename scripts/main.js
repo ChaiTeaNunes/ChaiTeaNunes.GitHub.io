@@ -1,5 +1,6 @@
 var squareCount = 10;
 var squareSize;
+var hasLooped = false;
 var squares = [];
 
 var Square = function (x, y, color) {
@@ -30,6 +31,9 @@ function drawSquares() {
             if (frameCount % (squareSize * 4) < squareSize * 2) {
                 squares[i][j].x += j % 2;
             } else {
+                if (!hasLooped && frameCount % (squareSize * 4) == squareSize * 2) {
+                    squares[i][j].x += 1;
+                }
                 squares[i][j].y += i % 2;   
             }
             squares[i][j].draw();
@@ -41,6 +45,7 @@ function drawSquares() {
             }
         }
     }
+    hasLooped = true;
 }
 
 function setup () {
