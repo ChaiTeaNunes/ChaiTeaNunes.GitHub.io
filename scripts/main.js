@@ -30,7 +30,7 @@ function drawSquares() {
         for (var j = 0; j < squares[i].length; j++) {
             if (frameCount % (squareSize * 2) <= squareSize) {
                 squares[i][j].x += (j % 2) * 2;
-            } else if ((squares[i][j].x + squareSize) % (squareSize * 2) != 0) {
+            } else if (squares[i][j].x % squareSize != 0) {
                 squares[i][j].x += j % 2;
             }
             squares[i][j].draw();
