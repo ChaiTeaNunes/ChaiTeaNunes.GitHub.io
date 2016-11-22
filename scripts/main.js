@@ -37,7 +37,7 @@ function drawSquares() {
 }
 
 function setup () {
-    createCanvas(displayWidth, displayHeight);
+    createCanvas(windowWidth, windowHeight);
     noStroke();
     background(255);
     angleMode(DEGREES);
