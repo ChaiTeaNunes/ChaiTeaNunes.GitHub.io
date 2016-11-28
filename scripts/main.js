@@ -14,7 +14,7 @@ var Square = function (x, y, color) {
 
 function instantiateSquares() {
     var square;
-    for (var i = 0; i < squareCount + 1; i++) {
+    for (var i = 0; i < squareCount + 2 + (squareCount % 2); i++) {
         squares.push([]);
         for (var j = 0; j < Math.round(height / squareSize) + 2; j++) {
             square = new Square((i - 2) * squareSize + (j % 2) * 2, (j - 2) * squareSize, ((i + (j % 2)) % 2) * 255);
