@@ -1,4 +1,4 @@
-var squareCount = 10;
+var squareCount = 11;
 var squareSize;
 var squares = [];
 
