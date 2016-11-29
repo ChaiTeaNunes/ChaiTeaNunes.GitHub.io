@@ -49,7 +49,11 @@ function setup () {
     background(255);
     angleMode(DEGREES);
     
-    squareSize = Math.round(width / squareCount);
+    if (width >= height) {
+        squareSize = Math.round(width / squareCount);
+    } else {
+        squareSize = Math.round(height / squareCount);
+    }
     instantiateSquares();
 }
 
